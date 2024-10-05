@@ -17,6 +17,7 @@ jobs:
           cache: 'gradle'
       - run: chmod +x ./gradlew
       - run: ./gradlew :composeApp:wasmJsBrowserDistribution
+      - run: ls composeApp/build/dist/wasmJs/productionExecutable
       - uses: actions/upload-pages-artifact@v3
         with:
           path: composeApp/build/dist/wasmJs/productionExecutable
